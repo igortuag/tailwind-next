@@ -28,8 +28,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="min-h-screen grid grid-cols-app">
-          <aside>aside</aside>
-          <main>{children}</main>
+          <aside className="border-r border-zinc-200 px-5 py-8">aside</aside>
+          <main className="px-4 pb-12 pt-8">{children}</main>
         </div>
       </body>
     </html>

@@ -12,6 +12,7 @@ import {
 import { Logo } from "./Logo";
 import { MainNavigation } from "./MainNavigation";
 import { NavItem } from "./NavItem";
+import { UsedSpaceWidget } from "./UsedSpaceWidget";
 
 export const Sidebar = () => {
   return (
@@ -40,6 +41,8 @@ export const Sidebar = () => {
           <NavItem title="Support" icon={LifeBuoy} href="/support" />
           <NavItem title="Settings" icon={Cog} href="/settings" />
         </nav>
+
+        <UsedSpaceWidget />
       </div>
     </aside>
   );

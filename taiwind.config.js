@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        app: "250px 1fr"
+        app: "minmax(18rem, 20rem) 1fr",
+        profile: "max-content 1fr max-content",
       },
 
       colors: {

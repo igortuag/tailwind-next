@@ -9,14 +9,21 @@ export default function Home() {
 
       <div className="mt-6 flex flex-col">
         <div className="flex justify-between items-center">
-          <div></div>
+          <div className="space-y-1">
+            <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
+            <span className="text-sm text-zinc-500">
+              Update your photo and personal details here.
+            </span>
+          </div>
           <div className="flex items-center gap-2">
             <button type="button">Cancel</button>
-            <button type="submit" form="settings">Save</button>
+            <button type="submit" form="settings">
+              Save
+            </button>
           </div>
         </div>
 
-        <form id="settings-form" action=""></form>
+        <form id="settings-form"></form>
       </div>
     </div>
   );

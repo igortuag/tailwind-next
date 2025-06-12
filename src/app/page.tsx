@@ -8,7 +8,7 @@ export default function Home() {
       <SettingsTabs />
 
       <div className="mt-6 flex flex-col">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between pb-5 items-center border-b border-zinc-200">
           <div className="space-y-1">
             <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
             <span className="text-sm text-zinc-500">
@@ -32,7 +32,9 @@ export default function Home() {
           </div>
         </div>
 
-        <form id="settings-form"></form>
+        <form id="settings-form" className="mt-6 flex flex-col w-full border">
+          form
+        </form>
       </div>
     </div>
   );

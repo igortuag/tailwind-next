@@ -1,4 +1,5 @@
 import SettingsTabs from "@/components/SettingsTabs";
+import * as Input from "@/components/Input";
 
 export default function Home() {
   return (
@@ -32,8 +33,26 @@ export default function Home() {
           </div>
         </div>
 
-        <form id="settings-form" className="mt-6 flex flex-col w-full border">
-          form
+        <form
+          id="settings-form"
+          className="mt-6 flex flex-col w-full border gap-5"
+        >
+          <div className="grid gap-3 grid-cols-form">
+            <label
+              htmlFor="firstName"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Name
+            </label>
+            <div className="grid gap-6 grid-cols-2">
+              <Input.Root>
+                <Input.Control id="firstName" placeholder="John" />
+              </Input.Root>
+              <Input.Root>
+                <Input.Control id="secondName" placeholder="Doe" />
+              </Input.Root>
+            </div>
+          </div>
         </form>
       </div>
     </div>

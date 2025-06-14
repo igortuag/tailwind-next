@@ -1,5 +1,6 @@
 import SettingsTabs from "@/components/SettingsTabs";
 import * as Input from "@/components/Input";
+import { Mail } from "lucide-react";
 
 export default function Home() {
   return (
@@ -35,7 +36,7 @@ export default function Home() {
 
         <form
           id="settings-form"
-          className="mt-6 flex flex-col w-full border gap-5"
+          className="mt-6 flex flex-col w-full border gap-5 divide-y divide-zinc-200"
         >
           <div className="grid gap-3 grid-cols-form">
             <label
@@ -52,6 +53,38 @@ export default function Home() {
                 <Input.Control id="secondName" placeholder="Doe" />
               </Input.Root>
             </div>
+          </div>
+
+          <div className="grid gap-3 grid-cols-form pt-5">
+            <label
+              htmlFor="email"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Email address
+            </label>
+            <Input.Root>
+              <Input.Prefix>
+                <Mail className="h-5 w-5 text-zinc-500" />
+              </Input.Prefix>
+              <Input.Control
+                id="email"
+                placeholder="you@example.com"
+                type="email"
+              />
+            </Input.Root>
+          </div>
+
+          <div className="grid gap-3 grid-cols-form pt-5">
+            <label
+              htmlFor="yourPhoto"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Your photo
+              <p className="text-sm font-normal text-zinc-500 mt-0.5">
+                This will be displayed on your profile.
+              </p>
+            </label>
+            <div></div>
           </div>
         </form>
       </div>

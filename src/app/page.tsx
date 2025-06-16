@@ -1,6 +1,6 @@
 import SettingsTabs from "@/components/SettingsTabs";
 import * as Input from "@/components/Input";
-import { Mail } from "lucide-react";
+import { Mail, User } from "lucide-react";
 
 export default function Home() {
   return (
@@ -76,7 +76,7 @@ export default function Home() {
 
           <div className="grid gap-3 grid-cols-form pt-5">
             <label
-              htmlFor="yourPhoto"
+              htmlFor="photo"
               className="text-sm font-medium text-zinc-700"
             >
               Your photo
@@ -84,7 +84,15 @@ export default function Home() {
                 This will be displayed on your profile.
               </p>
             </label>
-            <div></div>
+            <div className="flex items-start gap-5">
+              <div className="bg-violet-50 flex h-16 2-16 items-center justify-center rounded-full">
+                <User className="w-8 h-8 text-violet-500" />
+              </div>
+
+              <label htmlFor="photo">Selecionar arquivo</label>
+
+              <input type="file" className="sr-only" id="photo" />
+            </div>
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-5">

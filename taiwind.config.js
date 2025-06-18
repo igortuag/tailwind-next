@@ -14,7 +14,9 @@ module.exports = {
       },
 
       colors: {
-        rocketseat: "#8257e6"
+        violet: {
+          25: "#fcfaff",
+        }
       }
     }
   },

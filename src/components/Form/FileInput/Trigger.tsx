@@ -1,6 +1,6 @@
 import { UploadCloud } from "lucide-react";
 
-export default function Trigger() {
+export function Trigger() {
   return (
     <label
       htmlFor="photo"

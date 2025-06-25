@@ -75,13 +75,11 @@ export default function Home() {
             </Input.Root>
           </div>
 
-          <div className="grid gap-3 grid-cols-form pt-5">
-            <FileInput.Root>
-              <FileInput.ImagePreview />
-              <FileInput.Trigger />
-              <FileInput.Control />
-            </FileInput.Root>
-          </div>
+          <FileInput.Root className="grid gap-3 grid-cols-form pt-5">
+            <FileInput.ImagePreview />
+            <FileInput.Trigger />
+            <FileInput.Control />
+          </FileInput.Root>
 
           <div className="grid gap-3 grid-cols-form pt-5">
             <label htmlFor="role" className="text-sm font-medium text-zinc-700">
@@ -136,7 +134,10 @@ export default function Home() {
                 Share a few snippets of your work.
               </p>
             </label>
-            <div></div>
+            <FileInput.Root className="grid gap-3 grid-cols-form pt-5">
+              <FileInput.Trigger />
+              <FileInput.Control multiple />
+            </FileInput.Root>
           </div>
 
           <div className="flex items-center justify-end gap-2 pt-5">

@@ -1,4 +1,5 @@
-import { ComponentProps, createContext, useId } from "react";
+"use client";
+import { ComponentProps, createContext, useContext, useId } from "react";
 
 export interface RootProps extends ComponentProps<"div"> {}
 
@@ -6,9 +7,7 @@ type FileInputContextType = {
   id: string;
 };
 
-export const FileInputContext = createContext<FileInputContextType | null>(
-  null
-);
+export const FileInputContext = createContext({} as FileInputContextType);
 
 export function Root(props: RootProps) {
   const id = useId();
@@ -19,3 +18,5 @@ export function Root(props: RootProps) {
     </FileInputContext.Provider>
   );
 }
+
+export const useFileInput = () => useContext(FileInputContext);

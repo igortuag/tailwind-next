@@ -136,6 +136,7 @@ export default function Home() {
             </label>
             <FileInput.Root className="grid gap-3 grid-cols-form pt-5">
               <FileInput.Trigger />
+              <FileInput.FileList />
               <FileInput.Control multiple />
             </FileInput.Root>
           </div>

@@ -4,7 +4,7 @@ import { useFileInput } from "./Root";
 
 interface ControlProps extends ComponentProps<"input"> {}
 
-export function Control(props: ControlProps) {
+export function Control({multiple, ...props}: ControlProps) {
   const { id, onFilesSelected } = useFileInput();
 
   function handleFileSelected(e: ChangeEvent<HTMLInputElement>) {

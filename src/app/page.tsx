@@ -1,8 +1,8 @@
 import SettingsTabs from "@/components/SettingsTabs";
 import * as Input from "@/components/Input";
 import * as FileInput from "@/components/Form/FileInput";
-import * as Select from "@radix-ui/react-select"
 import { ChevronDown, Mail, UploadCloud, User } from "lucide-react";
+import Select from "@/components/Form/Select";
 
 export default function Home() {
   return (
@@ -102,21 +102,7 @@ export default function Home() {
             >
               Country
             </label>
-            <Select.Root>
-              <Select.Trigger
-                className="flex h-11 w-full items-center justify-between rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm hover:border-zinc-400 focus:border-violet-600 focus:outline-none focus:ring-1 focus:ring-violet-600"
-              >
-                <Select.Value className="text-black" placeholder="Select a country" />
-                <Select.Icon className="text-zinc-500">
-                  <ChevronDown className="h-5 w-5" />
-                </Select.Icon>
-              </Select.Trigger>
-              <Select.Content>
-                <Select.Item value="usa">United States</Select.Item>
-                <Select.Item value="canada">Canada</Select.Item>
-                <Select.Item value="uk">United Kingdom</Select.Item>
-              </Select.Content>
-            </Select.Root>
+            <Select />
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-5">

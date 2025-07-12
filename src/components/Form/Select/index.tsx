@@ -1,6 +1,7 @@
 "use client";
 import * as SelectPrimitive from "@radix-ui/react-select";
 import { Check, ChevronDown } from "lucide-react";
+import { SelectItem } from "./SelectItem";
 
 export default function Select() {
   return (
@@ -22,28 +23,10 @@ export default function Select() {
           className="z-10 rounded-lg border border-zinc-200 bg-white w-[--radix-select-trigger-width] overflow-hidden"
         >
           <SelectPrimitive.Viewport>
-            <SelectPrimitive.Item
-              value="br"
-              className="flex items-center gap-2 py-2.5 outline-none data-[highlighted]:bg-zinc-50 data-[highlighted]:text-violet-900 justify-between"
-            >
-              <SelectPrimitive.ItemText className="text-sm text-zinc-900">
-                Brazil
-              </SelectPrimitive.ItemText>
-              <SelectPrimitive.ItemIndicator className="text-violet-600">
-                <Check className="h-4 w-4 text-violet-500" />
-              </SelectPrimitive.ItemIndicator>
-            </SelectPrimitive.Item>
-            <SelectPrimitive.Item
-              value="us"
-              className="flex items-center gap-2 py-2.5 outline-none data-[highlighted]:bg-zinc-50 data-[highlighted]:text-violet-900 justify-between"
-            >
-              <SelectPrimitive.ItemText className="text-sm text-zinc-900">
-                United States
-              </SelectPrimitive.ItemText>
-              <SelectPrimitive.ItemIndicator className="text-violet-600">
-                <Check className="h-4 w-4 text-violet-500" />
-              </SelectPrimitive.ItemIndicator>
-            </SelectPrimitive.Item>
+            <SelectItem text="Brazil" value="br" />
+            <SelectItem text="Argentina" value="ar" />
+            <SelectItem text="Chile" value="cl" />
+            <SelectItem text="Colombia" value="co" />
           </SelectPrimitive.Viewport>
         </SelectPrimitive.Content>
       </SelectPrimitive.Portal>

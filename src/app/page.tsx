@@ -3,6 +3,7 @@ import * as Input from "@/components/Input";
 import * as FileInput from "@/components/Form/FileInput";
 import { ChevronDown, Mail, UploadCloud, User } from "lucide-react";
 import Select from "@/components/Form/Select";
+import { SelectItem } from "@/components/Form/Select/SelectItem";
 
 export default function Home() {
   return (
@@ -102,7 +103,14 @@ export default function Home() {
             >
               Country
             </label>
-            <Select />
+            <Select
+              placeholder="Select your country..."
+            >
+              <SelectItem text="Brazil" value="br" />
+              <SelectItem text="Argentina" value="ar" />
+              <SelectItem text="Chile" value="cl" />
+              <SelectItem text="Colombia" value="co" />
+            </Select>
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-5">

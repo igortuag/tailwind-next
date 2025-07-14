@@ -1,7 +1,7 @@
 import SettingsTabs from "@/components/SettingsTabs";
 import * as Input from "@/components/Input";
 import * as FileInput from "@/components/Form/FileInput";
-import { ChevronDown, Mail, UploadCloud, User } from "lucide-react";
+import { Mail } from "lucide-react";
 import Select from "@/components/Form/Select";
 import { SelectItem } from "@/components/Form/Select/SelectItem";
 
@@ -120,7 +120,18 @@ export default function Home() {
             >
               Timezone
             </label>
-            <div></div>
+            <Select
+              placeholder="Select your timezone..."
+            >
+              <SelectItem text="Pacific Standard time (UTC-08:00)" value="utc-8" />
+              <SelectItem text="Mountain Standard time (UTC-07:00)" value="utc-7" />
+              <SelectItem text="Central Standard time (UTC-06:00)" value="utc-6" />
+              <SelectItem text="Eastern Standard time (UTC-05:00)" value="utc-5" />
+              <SelectItem text="Atlantic Standard time (UTC-04:00)" value="utc-4" />
+              <SelectItem text="Greenwich Mean time (UTC+00:00)" value="utc+0" />
+              <SelectItem text="Central European time (UTC+01:00)" value="utc+1" />
+              <SelectItem text="Eastern European time (UTC+02:00)" value="utc+2" />
+            </Select>
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-5">

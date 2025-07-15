@@ -4,7 +4,7 @@ import { Check, ChevronDown } from "lucide-react";
 import { SelectItem } from "./SelectItem";
 import { ReactNode } from "react";
 
-export interface SelectProps {
+export interface SelectProps extends SelectPrimitive.SelectProps {
   children: ReactNode;
   placeholder?: string;
 }

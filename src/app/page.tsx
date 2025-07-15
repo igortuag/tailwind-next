@@ -141,7 +141,15 @@ export default function Home() {
                 Write a short introduction.
               </p>
             </label>
-            <div></div>
+            <div className="space-y-3">
+              <div className="grid gap-3 grid-cols-2">
+                <Select defaultValue="normal">
+                  <SelectItem text="normal" defaultChecked value="Normal Text" />
+                  <SelectItem text="bold" value="Bold Text" />
+                  <SelectItem text="italic" value="Italic Text" />
+                </Select>
+              </div>
+            </div>
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-5">

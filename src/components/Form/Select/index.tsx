@@ -9,9 +9,9 @@ export interface SelectProps extends SelectPrimitive.SelectProps {
   placeholder?: string;
 }
 
-export default function Select({ children, placeholder }: SelectProps) {
+export default function Select({ children, placeholder, ...props }: SelectProps) {
   return (
-    <SelectPrimitive.Root>
+    <SelectPrimitive.Root {...props}>
       <SelectPrimitive.Trigger className="flex h-11 w-full items-center justify-between rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm hover:border-zinc-400 focus:border-violet-600 focus:outline-none focus:ring-1 focus:ring-violet-600 data-[placeholder]:text-zinc-600">
         <SelectPrimitive.Value
           className="text-black"

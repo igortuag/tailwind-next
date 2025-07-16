@@ -1,7 +1,7 @@
 import SettingsTabs from "@/components/SettingsTabs";
 import * as Input from "@/components/Input";
 import * as FileInput from "@/components/Form/FileInput";
-import { Mail } from "lucide-react";
+import { Bold, Italic, Link, List, ListOrdered, Mail } from "lucide-react";
 import Select from "@/components/Form/Select";
 import { SelectItem } from "@/components/Form/Select/SelectItem";
 
@@ -148,6 +148,44 @@ export default function Home() {
                   <SelectItem text="bold" value="Bold Text" />
                   <SelectItem text="italic" value="Italic Text" />
                 </Select>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-50 rounded-mds"
+                  >
+                    <Bold className="w-4 h-4 text-zinc-500" strokeWidth={3} />
+                    <span className="sr-only">Bold</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-50 rounded-mds"
+                  >
+                    <Italic className="w-4 h-4 text-zinc-500" strokeWidth={3} />
+                    <span className="sr-only">Italic</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-50 rounded-mds"
+                  >
+                    <Link className="w-4 h-4 text-zinc-500" strokeWidth={3} />
+                    <span className="sr-only">Link</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-50 rounded-mds"
+                  >
+                    <List className="w-4 h-4 text-zinc-500" strokeWidth={3} />
+                    <span className="sr-only">List</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="p-2 hover:bg-zinc-50 rounded-mds"
+                  >
+                    <ListOrdered className="w-4 h-4 text-zinc-500" strokeWidth={3} />
+                    <span className="sr-only">List Ordered</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import * as FileInput from "@/components/Form/FileInput";
 import { Bold, Italic, Link, List, ListOrdered, Mail } from "lucide-react";
 import Select from "@/components/Form/Select";
 import { SelectItem } from "@/components/Form/Select/SelectItem";
+import Textarea from "@/components/Form/Textarea";
 
 export default function Home() {
   return (
@@ -103,9 +104,7 @@ export default function Home() {
             >
               Country
             </label>
-            <Select
-              placeholder="Select your country..."
-            >
+            <Select placeholder="Select your country...">
               <SelectItem text="Brazil" value="br" />
               <SelectItem text="Argentina" value="ar" />
               <SelectItem text="Chile" value="cl" />
@@ -120,17 +119,39 @@ export default function Home() {
             >
               Timezone
             </label>
-            <Select
-              placeholder="Select your timezone..."
-            >
-              <SelectItem text="Pacific Standard time (UTC-08:00)" value="utc-8" />
-              <SelectItem text="Mountain Standard time (UTC-07:00)" value="utc-7" />
-              <SelectItem text="Central Standard time (UTC-06:00)" value="utc-6" />
-              <SelectItem text="Eastern Standard time (UTC-05:00)" value="utc-5" />
-              <SelectItem text="Atlantic Standard time (UTC-04:00)" value="utc-4" />
-              <SelectItem text="Greenwich Mean time (UTC+00:00)" value="utc+0" />
-              <SelectItem text="Central European time (UTC+01:00)" value="utc+1" />
-              <SelectItem text="Eastern European time (UTC+02:00)" value="utc+2" />
+            <Select placeholder="Select your timezone...">
+              <SelectItem
+                text="Pacific Standard time (UTC-08:00)"
+                value="utc-8"
+              />
+              <SelectItem
+                text="Mountain Standard time (UTC-07:00)"
+                value="utc-7"
+              />
+              <SelectItem
+                text="Central Standard time (UTC-06:00)"
+                value="utc-6"
+              />
+              <SelectItem
+                text="Eastern Standard time (UTC-05:00)"
+                value="utc-5"
+              />
+              <SelectItem
+                text="Atlantic Standard time (UTC-04:00)"
+                value="utc-4"
+              />
+              <SelectItem
+                text="Greenwich Mean time (UTC+00:00)"
+                value="utc+0"
+              />
+              <SelectItem
+                text="Central European time (UTC+01:00)"
+                value="utc+1"
+              />
+              <SelectItem
+                text="Eastern European time (UTC+02:00)"
+                value="utc+2"
+              />
             </Select>
           </div>
 
@@ -144,7 +165,11 @@ export default function Home() {
             <div className="space-y-3">
               <div className="grid gap-3 grid-cols-2">
                 <Select defaultValue="normal">
-                  <SelectItem text="normal" defaultChecked value="Normal Text" />
+                  <SelectItem
+                    text="normal"
+                    defaultChecked
+                    value="Normal Text"
+                  />
                   <SelectItem text="bold" value="Bold Text" />
                   <SelectItem text="italic" value="Italic Text" />
                 </Select>
@@ -182,18 +207,19 @@ export default function Home() {
                     type="button"
                     className="p-2 hover:bg-zinc-50 rounded-mds"
                   >
-                    <ListOrdered className="w-4 h-4 text-zinc-500" strokeWidth={3} />
+                    <ListOrdered
+                      className="w-4 h-4 text-zinc-500"
+                      strokeWidth={3}
+                    />
                     <span className="sr-only">List Ordered</span>
                   </button>
                 </div>
               </div>
 
-              <textarea
+              <Textarea
                 id="bio"
-                className="min-h-[120px] resize-y w-full rounded-lg border border-zinc-300 px-3 py-2 shadow-sm"
                 placeholder="Write a short introduction about yourself..."
                 defaultValue="I'm a Product Designer based in Melbourne, Australia. I love creating user-friendly interfaces and experiences."
-                rows={4}
               />
             </div>
           </div>

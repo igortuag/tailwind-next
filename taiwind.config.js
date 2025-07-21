@@ -40,7 +40,10 @@ module.exports = {
         },
       },
 
-      animations: {},
+      animations: {
+        slideDownAndFade: "slideDownAndFade 0.2s ease-out",
+        slideUpAndFade: "slideUpAndFade 0.2s ease-out",
+      },
     },
   },
   plugins: [],

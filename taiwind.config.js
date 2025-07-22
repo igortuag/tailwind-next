@@ -1,4 +1,5 @@
 const { keyframes } = require("framer-motion");
+const { transform } = require("typescript");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -25,9 +26,11 @@ module.exports = {
         slideDownAndFade: {
           from: {
             opacity: 0,
+            transform: "translateY(-2px)",
           },
           to: {
             opacity: 1,
+            transform: "translateY(0)",
           },
         },
         slideUpAndFade: {
@@ -41,7 +44,7 @@ module.exports = {
       },
 
       animations: {
-        slideDownAndFade: "slideDownAndFade 0.2s ease-out",
+        slideDownAndFade: "slideDownAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
         slideUpAndFade: "slideUpAndFade 0.2s ease-out",
       },
     },

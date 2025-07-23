@@ -12,7 +12,7 @@ export function Control(props: ControlProps) {
   return (
     <input
       {...props}
-      className="flex-1 border-none bg-transparent text-zinc-900 placeholder-zinc-900"
+      className="flex-1 border-none bg-transparent outline-none text-zinc-900 placeholder-zinc-900"
       placeholder="Search"
     />
   );
@@ -23,7 +23,7 @@ export type RootProps = ComponentProps<"div">;
 export function Root(props: RootProps) {
   return (
     <div
-      className="mx-1 flex w-full items-center gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm"
+      className="mx-1 flex w-full items-center gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm focus-within:border-violet-300 focus-within:ring-4 focus-within:ring-violet-100"
       {...props}
     />
   );

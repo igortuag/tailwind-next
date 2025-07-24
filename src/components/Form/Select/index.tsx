@@ -9,10 +9,14 @@ export interface SelectProps extends SelectPrimitive.SelectProps {
   placeholder?: string;
 }
 
-export default function Select({ children, placeholder, ...props }: SelectProps) {
+export default function Select({
+  children,
+  placeholder,
+  ...props
+}: SelectProps) {
   return (
     <SelectPrimitive.Root {...props}>
-      <SelectPrimitive.Trigger className="flex h-11 w-full items-center justify-between rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm hover:border-zinc-400 focus:border-violet-600 focus:outline-none focus:ring-1 focus:ring-violet-600 data-[placeholder]:text-zinc-600">
+      <SelectPrimitive.Trigger className="flex h-11 w-full items-center justify-between rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm hover:border-zinc-400  focus:outline-none data-[placeholder]:text-zinc-600 outline-none focus:border-violet-300 focus:ring-4 focus:ring-violet-100">
         <SelectPrimitive.Value
           className="text-black"
           placeholder={placeholder}
@@ -28,9 +32,7 @@ export default function Select({ children, placeholder, ...props }: SelectProps)
           sideOffset={8}
           className="z-10 shadow-sm rounded-lg border border-zinc-200 bg-white w-[--radix-select-trigger-width] overflow-hidden animate-slideDownAndFade"
         >
-          <SelectPrimitive.Viewport>
-            {children}
-          </SelectPrimitive.Viewport>
+          <SelectPrimitive.Viewport>{children}</SelectPrimitive.Viewport>
         </SelectPrimitive.Content>
       </SelectPrimitive.Portal>
     </SelectPrimitive.Root>

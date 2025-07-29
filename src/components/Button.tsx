@@ -20,12 +20,15 @@ const button = tv({
   },
 });
 
-export interface ButtonProps extends ComponentProps<"button"> {}
+export interface ButtonProps extends ComponentProps<"button"> {
+  variant?: "primary" | "secondary";
+  size?: "small" | "medium" | "large";
+}
 
 export const Button = (props: ButtonProps) => {
   return (
     <button
-      className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm bg-violet-600 text-white hover:bg-violet-700"
+      className={button({ variant: props.variant, size: props.size })}
       {...props}
     />
   );

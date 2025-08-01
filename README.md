@@ -6,6 +6,14 @@ This is a project for learn some useful tips about use tailwind
 
 The Strategy is built and dashboard
 
+## Features
+
+- Sidebar styles
+- File Select styles with drag and drop
+- Input text styles
+- Rich text styles 
+- Composition patern 
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

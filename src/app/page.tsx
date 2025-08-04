@@ -23,12 +23,13 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <button
+            <Button
               className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm border border-zinc-300 text-zinc-700 hover:bg-zinc-50"
               type="button"
+              variant="outline"
             >
               Cancel
-            </button>
+            </Button>
             <Button type="submit" form="settings">
               Save
             </Button>
@@ -239,18 +240,16 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-end gap-2 pt-5">
-            <button
+            <Button
               className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm border border-zinc-300 text-zinc-700 hover:bg-zinc-50"
               type="button"
+              variant="outline"
             >
               Cancel
-            </button>
-            <button
-              type="submit"
-              className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm bg-violet-600 text-white hover:bg-violet-700"
-            >
+            </Button>
+            <Button type="submit" form="settings">
               Save
-            </button>
+            </Button>
           </div>
         </form>
       </div>

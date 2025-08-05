@@ -173,44 +173,29 @@ export default function Home() {
                 </Select>
 
                 <div className="flex items-center gap-1">
-                  <button
-                    type="button"
-                    className="p-2 hover:bg-zinc-50 rounded-mds"
-                  >
+                  <Button type="button" variant="ghost">
                     <Bold className="w-4 h-4 text-zinc-500" strokeWidth={3} />
                     <span className="sr-only">Bold</span>
-                  </button>
-                  <button
-                    type="button"
-                    className="p-2 hover:bg-zinc-50 rounded-mds"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <Italic className="w-4 h-4 text-zinc-500" strokeWidth={3} />
                     <span className="sr-only">Italic</span>
-                  </button>
-                  <button
-                    type="button"
-                    className="p-2 hover:bg-zinc-50 rounded-mds"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <Link className="w-4 h-4 text-zinc-500" strokeWidth={3} />
                     <span className="sr-only">Link</span>
-                  </button>
-                  <button
-                    type="button"
-                    className="p-2 hover:bg-zinc-50 rounded-mds"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <List className="w-4 h-4 text-zinc-500" strokeWidth={3} />
                     <span className="sr-only">List</span>
-                  </button>
-                  <button
-                    type="button"
-                    className="p-2 hover:bg-zinc-50 rounded-mds"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <ListOrdered
                       className="w-4 h-4 text-zinc-500"
                       strokeWidth={3}
                     />
                     <span className="sr-only">List Ordered</span>
-                  </button>
+                  </Button>
                 </div>
               </div>
 

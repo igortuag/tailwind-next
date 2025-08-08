@@ -24,9 +24,14 @@ export function FileItem({ name, size }: FileItemProps) {
 
         <div className="flex w-full items-center gap-3">
           <div className="h-2 flex-1 rounded-full bg-zinc-100">
-            <div className="h-2 rounded-full bg-violet-600 w-4/5" />
+            <div
+              className="h-2 rounded-full bg-violet-600"
+              style={{ width: state === "complete" ? "100%" : "80%" }}
+            />
           </div>
-          <span className="text-sm font-medium text-zinc-500">80%</span>
+          <span className="text-sm font-medium text-zinc-500">
+            {state === "complete" ? "100%" : "80%"}
+          </span>
         </div>
 
         {state === "complete" ? (

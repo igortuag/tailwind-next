@@ -8,7 +8,7 @@ export interface FileItemProps {
 }
 
 export function FileItem({ name, size }: FileItemProps) {
-  const state = "complete";
+  const state = "error" as "progress" | "complete" | "error";
 
   return (
     <div className="group flex items-start gap-4 rounded-lg border border-zinc-200 p-4">
@@ -16,33 +16,51 @@ export function FileItem({ name, size }: FileItemProps) {
         <UploadCloud className="h-4 w-4" />
       </div>
 
-      <div className="flex flex-1 flex-col items-start gap-1">
-        <div className="flex flex-col">
-          <div className="text-sm font-medium text-zinc-700">{name}</div>
-          <div className="text-sm text-zinc-500">{formatBytes(size)}</div>
-        </div>
-
-        <div className="flex w-full items-center gap-3">
-          <div className="h-2 flex-1 rounded-full bg-zinc-100">
-            <div
-              className="h-2 rounded-full bg-violet-600"
-              style={{ width: state === "complete" ? "100%" : "80%" }}
-            />
+      {state === "error" ? (
+        <div className="flex flex-1 flex-col items-start gap-1">
+          <div className="flex flex-col">
+            <div className="text-sm font-medium text-error-700">
+              Upload failed, please try again.
+            </div>
+            <div className="text-sm text-error-600">{name}</div>
           </div>
-          <span className="text-sm font-medium text-zinc-500">
-            {state === "complete" ? "100%" : "80%"}
-          </span>
-        </div>
 
-        {state === "complete" ? (
-          <CheckCircle2 className="h-5 w-5 fill-violet-600 text-white" />
-        ) : (
-          <Button type="button" variant="ghost">
-            <Trash2 className="w-5 h-5 text-zinc-500" />
-            <span className="sr-only">Remove</span>
-          </Button>
-        )}
-      </div>
+          <button
+            type="button"
+            className="text-sm font-semibold text-red-700 hover:text-red-900"
+          >
+            try again
+          </button>
+        </div>
+      ) : (
+        <div className="flex flex-1 flex-col items-start gap-1">
+          <div className="flex flex-col">
+            <div className="text-sm font-medium text-zinc-700">{name}</div>
+            <div className="text-sm text-zinc-500">{formatBytes(size)}</div>
+          </div>
+
+          <div className="flex w-full items-center gap-3">
+            <div className="h-2 flex-1 rounded-full bg-zinc-100">
+              <div
+                className="h-2 rounded-full bg-violet-600"
+                style={{ width: state === "complete" ? "100%" : "80%" }}
+              />
+            </div>
+            <span className="text-sm font-medium text-zinc-500">
+              {state === "complete" ? "100%" : "80%"}
+            </span>
+          </div>
+        </div>
+      )}
+
+      {state === "complete" ? (
+        <CheckCircle2 className="h-5 w-5 fill-violet-600 text-white" />
+      ) : (
+        <Button type="button" variant="ghost">
+          <Trash2 className="w-5 h-5 text-zinc-500" />
+          <span className="sr-only">Remove</span>
+        </Button>
+      )}
     </div>
   );
 }

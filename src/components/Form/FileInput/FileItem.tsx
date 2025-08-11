@@ -4,13 +4,16 @@ import { CheckCircle2, Trash2, UploadCloud } from "lucide-react";
 import { tv, VariantProps } from "tailwind-variants";
 
 export const fileItem = tv({
-  base: "group flex items-start gap-4 rounded-lg border border-zinc-200 p-4",
+  slots: {
+    container:
+      "group flex items-start gap-4 rounded-lg border border-zinc-200 p-4"
+  },
 
   variants: {
     state: {
-      progress: "bg-blue-50 border-blue-200",
-      complete: "bg-green-50 border-green-200",
-      error: "bg-red-50 border-red-200"
+      progress: { container: "bg-blue-50 border-blue-200" },
+      complete: { container: "border-violet-500" },
+      error: { container: "bg-error-25 border-error-300" }
     },
 
     defaultVariants: {
@@ -25,8 +28,10 @@ export interface FileItemProps extends VariantProps<typeof fileItem> {
 }
 
 export function FileItem({ name, size, state }: FileItemProps) {
+  const { container } = fileItem({ state });
+
   return (
-    <div className={fileItem({ state })}>
+    <div className={container()}>
       <div className="rounded-full border-violet-100 bg-violet-200 p-2 text-violet-600">
         <UploadCloud className="h-4 w-4" />
       </div>

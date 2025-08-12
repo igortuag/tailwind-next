@@ -6,14 +6,18 @@ import { tv, VariantProps } from "tailwind-variants";
 export const fileItem = tv({
   slots: {
     container:
-      "group flex items-start gap-4 rounded-lg border border-zinc-200 p-4"
+      "group flex items-start gap-4 rounded-lg border border-zinc-200 p-4",
+    icon: "rounded-full border-violet-100 bg-violet-200 p-2 text-violet-600"
   },
 
   variants: {
     state: {
-      progress: { container: "bg-blue-50 border-blue-200" },
+      progress: { container: "" },
       complete: { container: "border-violet-500" },
-      error: { container: "bg-error-25 border-error-300" }
+      error: {
+        container: "bg-error-25 border-error-300",
+        icon: "border-error-50 bg-error-100 text-error-600"
+      }
     },
 
     defaultVariants: {
@@ -28,11 +32,11 @@ export interface FileItemProps extends VariantProps<typeof fileItem> {
 }
 
 export function FileItem({ name, size, state }: FileItemProps) {
-  const { container } = fileItem({ state });
+  const { container, icon } = fileItem({ state });
 
   return (
     <div className={container()}>
-      <div className="rounded-full border-violet-100 bg-violet-200 p-2 text-violet-600">
+      <div className={icon()}>
         <UploadCloud className="h-4 w-4" />
       </div>
 

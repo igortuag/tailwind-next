@@ -7,7 +7,8 @@ export const fileItem = tv({
   slots: {
     container:
       "group flex items-start gap-4 rounded-lg border border-zinc-200 p-4",
-    icon: "rounded-full border-violet-100 bg-violet-200 p-2 text-violet-600"
+    icon: "rounded-full border-violet-100 bg-violet-200 p-2 text-violet-600",
+    deleteButton: ""
   },
 
   variants: {
@@ -16,7 +17,8 @@ export const fileItem = tv({
       complete: { container: "border-violet-500" },
       error: {
         container: "bg-error-25 border-error-300",
-        icon: "border-error-50 bg-error-100 text-error-600"
+        icon: "border-error-50 bg-error-100 text-error-600",
+        deleteButton: "text-error-700 hover:text-error-900"
       }
     },
 
@@ -32,7 +34,7 @@ export interface FileItemProps extends VariantProps<typeof fileItem> {
 }
 
 export function FileItem({ name, size, state }: FileItemProps) {
-  const { container, icon } = fileItem({ state });
+  const { container, icon, deleteButton } = fileItem({ state });
 
   return (
     <div className={container()}>
@@ -80,8 +82,8 @@ export function FileItem({ name, size, state }: FileItemProps) {
       {state === "complete" ? (
         <CheckCircle2 className="h-5 w-5 fill-violet-600 text-white" />
       ) : (
-        <Button type="button" variant="ghost">
-          <Trash2 className="w-5 h-5 text-zinc-500" />
+        <Button type="button" variant="ghost" className={deleteButton()}>
+          <Trash2 className="w-5 h-5" />
           <span className="sr-only">Remove</span>
         </Button>
       )}

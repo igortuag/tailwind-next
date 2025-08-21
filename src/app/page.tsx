@@ -15,7 +15,7 @@ export default function Home() {
       <SettingsTabs />
 
       <div className="mt-6 flex flex-col">
-        <div className="flex justify-between pb-5 items-center border-b border-zinc-200">
+        <div className="flex flex-col lg:flex-row justify-between pb-5 lg:items-center border-b gap-4 border-zinc-200">
           <div className="space-y-1">
             <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
             <span className="text-sm text-zinc-500">
@@ -40,24 +40,31 @@ export default function Home() {
           id="settings-form"
           className="mt-6 flex flex-col w-full border gap-5 divide-y divide-zinc-200"
         >
-          <div className="grid gap-3 grid-cols-form">
+          <div className="grid gap-3 lg:grid-cols-form">
             <label
               htmlFor="firstName"
               className="text-sm font-medium text-zinc-700"
             >
               Name
             </label>
-            <div className="grid gap-6 grid-cols-2">
+            <div className="grid gap-6 lg:grid-cols-2">
               <Input.Root>
                 <Input.Control id="firstName" placeholder="John" />
               </Input.Root>
+
+              <label
+                htmlFor="lastName"
+                className="text-sm font-medium text-zinc-700 lg:sr-only"
+              >
+                Last name
+              </label>
               <Input.Root>
-                <Input.Control id="secondName" placeholder="Doe" />
+                <Input.Control id="lastName" placeholder="Doe" />
               </Input.Root>
             </div>
           </div>
 
-          <div className="grid gap-3 grid-cols-form pt-5">
+          <div className="grid gap-3 lg:grid-cols-form pt-5">
             <label
               htmlFor="email"
               className="text-sm font-medium text-zinc-700"
@@ -76,13 +83,13 @@ export default function Home() {
             </Input.Root>
           </div>
 
-          <FileInput.Root className="grid gap-3 grid-cols-form pt-5">
+          <FileInput.Root className="grid gap-3 lg:grid-cols-form pt-5">
             <FileInput.ImagePreview />
             <FileInput.Trigger />
             <FileInput.Control />
           </FileInput.Root>
 
-          <div className="grid gap-3 grid-cols-form pt-5">
+          <div className="grid gap-3 lg:grid-cols-form pt-5">
             <label htmlFor="role" className="text-sm font-medium text-zinc-700">
               Role
             </label>
@@ -95,7 +102,7 @@ export default function Home() {
             </Input.Root>
           </div>
 
-          <div className="grid gap-3 grid-cols-form pt-5">
+          <div className="grid gap-3 lg:grid-cols-form pt-5">
             <label
               htmlFor="country"
               className="text-sm font-medium text-zinc-700"
@@ -110,7 +117,7 @@ export default function Home() {
             </Select>
           </div>
 
-          <div className="grid gap-3 grid-cols-form pt-5">
+          <div className="grid gap-3 lg:grid-cols-form pt-5">
             <label
               htmlFor="timezone"
               className="text-sm font-medium text-zinc-700"
@@ -153,7 +160,7 @@ export default function Home() {
             </Select>
           </div>
 
-          <div className="grid gap-3 grid-cols-form pt-5">
+          <div className="grid gap-3 lg:grid-cols-form pt-5">
             <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
               Bio
               <p className="text-sm font-normal text-zinc-500 mt-0.5">
@@ -207,7 +214,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid gap-3 grid-cols-form pt-5">
+          <div className="grid gap-3 lg:grid-cols-form pt-5">
             <label
               htmlFor="projects"
               className="text-sm font-medium text-zinc-700"
@@ -217,7 +224,7 @@ export default function Home() {
                 Share a few snippets of your work.
               </p>
             </label>
-            <FileInput.Root className="grid gap-3 grid-cols-form pt-5">
+            <FileInput.Root className="grid gap-3 lg:grid-cols-form pt-5">
               <FileInput.Trigger />
               <FileInput.FileList />
               <FileInput.Control multiple />

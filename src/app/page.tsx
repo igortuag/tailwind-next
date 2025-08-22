@@ -52,15 +52,17 @@ export default function Home() {
                 <Input.Control id="firstName" placeholder="John" />
               </Input.Root>
 
-              <label
-                htmlFor="lastName"
-                className="text-sm font-medium text-zinc-700 lg:sr-only"
-              >
-                Last name
-              </label>
-              <Input.Root>
-                <Input.Control id="lastName" placeholder="Doe" />
-              </Input.Root>
+              <div className="grid gap-3 lg:block">
+                <label
+                  htmlFor="lastName"
+                  className="text-sm font-medium text-zinc-700 lg:sr-only"
+                >
+                  Last name
+                </label>
+                <Input.Root>
+                  <Input.Control id="lastName" placeholder="Doe" />
+                </Input.Root>
+              </div>
             </div>
           </div>
 
@@ -168,7 +170,7 @@ export default function Home() {
               </p>
             </label>
             <div className="space-y-3">
-              <div className="grid gap-3 grid-cols-2">
+              <div className="grid gap-3 lg:grid-cols-2">
                 <Select defaultValue="normal">
                   <SelectItem
                     text="normal"

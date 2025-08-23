@@ -21,7 +21,7 @@ import { Button } from "../Button";
 
 export const Sidebar = () => {
   return (
-    <Collapsable.Root className="border-b data-[state=open]:h-screen lg:data-[state=close]:h-screen border-zinc-200 lg:px-5 p-4 lg:py-8 flex flex-col gap-6 fixed left-0 top-0 right-0 data-[state=open]:bottom-0 lg:data-[state=close]:bottom-0 z-20 bg-white lg:right-auto lg:w-80 lg:border-r">
+    <Collapsable.Root className="border-b data-[state=open]:h-screen lg:data-[state=close]:h-screen border-zinc-200 lg:px-5 p-4 lg:py-8 flex flex-col gap-6 fixed left-0 top-0 right-0 data-[state=open]:bottom-0 lg:data-[state=close]:bottom-0 z-20 bg-white lg:right-auto lg:w-80 lg:border-r dark:bg-zinc-900 dark:border-zinc-800">
       <div className="flex items-center justify-between">
         <Logo />
         <Button variant="ghost">

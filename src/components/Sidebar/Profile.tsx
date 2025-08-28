@@ -10,8 +10,8 @@ export default function Profile() {
         className="h-10 w-10 rounded-full"
       />
       <div className="flex flex-col flex-1 truncate">
-        <span className="text-sm font-semibold text-zinc-700">Igor Tuag</span>
-        <span className="text-xs text-zinc-500 truncate">
+        <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-100">Igor Tuag</span>
+        <span className="text-xs text-zinc-500 dark:text-zinc-400 truncate">
           <a href="http://github.com/igortuag" target="_blank">
             http://github.com/igortuag
           </a>

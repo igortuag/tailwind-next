@@ -22,7 +22,7 @@ export default function TabItem({ value, title, isSelected }: TabItemProps) {
       {isSelected && (
         <motion.div
           layoutId="activeTab"
-          className="absolute inset-x-0 -bottom-px h-0.5 bg-violet-700"
+          className="absolute inset-x-0 -bottom-px h-0.5 bg-violet-700 dark:bg-violet-300"
         />
       )}
     </Tabs.Trigger>

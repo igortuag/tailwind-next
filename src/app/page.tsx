@@ -15,10 +15,12 @@ export default function Home() {
       <SettingsTabs />
 
       <div className="mt-6 flex flex-col">
-        <div className="flex flex-col lg:flex-row justify-between pb-5 lg:items-center border-b gap-4 border-zinc-200">
+        <div className="flex flex-col lg:flex-row justify-between pb-5 lg:items-center border-b gap-4 border-zinc-200 dark:border-zinc-700">
           <div className="space-y-1">
-            <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
-            <span className="text-sm text-zinc-500">
+            <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              Personal info
+            </h2>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400">
               Update your photo and personal details here.
             </span>
           </div>
@@ -38,12 +40,12 @@ export default function Home() {
 
         <form
           id="settings-form"
-          className="mt-6 flex flex-col w-full border gap-5 divide-y divide-zinc-200"
+          className="mt-6 flex flex-col w-full border gap-5 divide-y divide-zinc-200 dark:divide-zinc-700"
         >
           <div className="grid gap-3 lg:grid-cols-form">
             <label
               htmlFor="firstName"
-              className="text-sm font-medium text-zinc-700"
+              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               Name
             </label>
@@ -55,7 +57,7 @@ export default function Home() {
               <div className="grid gap-3 lg:block">
                 <label
                   htmlFor="lastName"
-                  className="text-sm font-medium text-zinc-700 lg:sr-only"
+                  className="text-sm font-medium text-zinc-700 dark:text-zinc-300 lg:sr-only"
                 >
                   Last name
                 </label>
@@ -69,7 +71,7 @@ export default function Home() {
           <div className="grid gap-3 lg:grid-cols-form pt-5">
             <label
               htmlFor="email"
-              className="text-sm font-medium text-zinc-700"
+              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               Email address
             </label>
@@ -92,7 +94,10 @@ export default function Home() {
           </FileInput.Root>
 
           <div className="grid gap-3 lg:grid-cols-form pt-5">
-            <label htmlFor="role" className="text-sm font-medium text-zinc-700">
+            <label
+              htmlFor="role"
+              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
+            >
               Role
             </label>
             <Input.Root>
@@ -107,7 +112,7 @@ export default function Home() {
           <div className="grid gap-3 lg:grid-cols-form pt-5">
             <label
               htmlFor="country"
-              className="text-sm font-medium text-zinc-700"
+              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               Country
             </label>
@@ -122,7 +127,7 @@ export default function Home() {
           <div className="grid gap-3 lg:grid-cols-form pt-5">
             <label
               htmlFor="timezone"
-              className="text-sm font-medium text-zinc-700"
+              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               Timezone
             </label>
@@ -163,7 +168,10 @@ export default function Home() {
           </div>
 
           <div className="grid gap-3 lg:grid-cols-form pt-5">
-            <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
+            <label
+              htmlFor="bio"
+              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
+            >
               Bio
               <p className="text-sm font-normal text-zinc-500 mt-0.5">
                 Write a short introduction.
@@ -219,7 +227,7 @@ export default function Home() {
           <div className="grid gap-3 lg:grid-cols-form pt-5">
             <label
               htmlFor="projects"
-              className="text-sm font-medium text-zinc-700"
+              className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               Portfolio projects
               <p className="text-sm font-normal text-zinc-500 mt-0.5">

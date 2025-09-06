@@ -1,21 +1,21 @@
-import * as Select from '@radix-ui/react-select';
-import { Check } from 'lucide-react';
+import * as Select from "@radix-ui/react-select";
+import { Check } from "lucide-react";
 
-export interface SelectItemProps extends Select.SelectItemProps { 
+export interface SelectItemProps extends Select.SelectItemProps {
   text: string;
 }
 
 export function SelectItem({ text, ...props }: SelectItemProps) {
   return (
     <Select.Item
-      className="flex items-center gap-2 py-2.5 outline-none data-[highlighted]:bg-zinc-50 data-[highlighted]:text-violet-900 justify-between"
+      className="flex items-center gap-2 py-2.5 outline-none data-[highlighted]:bg-zinc-50 data-[highlighted]:text-violet-900 justify-between dark:data-[highlighted]:bg-zinc-400"
       {...props}
     >
-      <Select.ItemText className="text-sm text-zinc-900">
-        {text}
+      <Select.ItemText asChild>
+        <span className="text-sm text-zinc-900 dark:text-zinc-100">{text}</span>
       </Select.ItemText>
-      <Select.ItemIndicator className="text-violet-600">
-        <Check className="h-4 w-4 text-violet-500" />
+      <Select.ItemIndicator>
+        <Check className="h-4 w-4 text-violet-500 dark:text-violet-300" />
       </Select.ItemIndicator>
     </Select.Item>
   );

@@ -8,7 +8,7 @@ export const fileItem = tv({
     container:
       "group flex items-start gap-4 rounded-lg border border-zinc-200 p-4",
     icon: "rounded-full border-violet-100 bg-violet-200 p-2 text-violet-600",
-    deleteButton: ""
+    deleteButton: "",
   },
 
   variants: {
@@ -16,16 +16,18 @@ export const fileItem = tv({
       progress: { container: "" },
       complete: { container: "border-violet-500" },
       error: {
-        container: "bg-error-25 border-error-300",
-        icon: "border-error-50 bg-error-100 text-error-600",
-        deleteButton: "text-error-700 hover:text-error-900"
-      }
+        container:
+          "bg-error-25 border-error-300 dark:bg-error-500/5 dark:border-error-500/30",
+        icon: "border-error-50 bg-error-100 text-error-600 dark:bg-error-500/5 dark:border-error-500/30 dark:text-error-400",
+        deleteButton:
+          "text-error-700 hover:text-error-900 dark:text-error-400 dark:hover:text-error-300",
+      },
     },
 
     defaultVariants: {
-      state: "progress"
-    }
-  }
+      state: "progress",
+    },
+  },
 });
 
 export interface FileItemProps extends VariantProps<typeof fileItem> {
@@ -45,15 +47,17 @@ export function FileItem({ name, size, state }: FileItemProps) {
       {state === "error" ? (
         <div className="flex flex-1 flex-col items-start gap-1">
           <div className="flex flex-col">
-            <div className="text-sm font-medium text-error-700">
+            <div className="text-sm font-medium text-error-700 dark:text-error-400">
               Upload failed, please try again.
             </div>
-            <div className="text-sm text-error-600">{name}</div>
+            <div className="text-sm text-error-600 dark:text-error-500">
+              {name}
+            </div>
           </div>
 
           <button
             type="button"
-            className="text-sm font-semibold text-red-700 hover:text-red-900"
+            className="text-sm font-semibold text-red-700 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300"
           >
             try again
           </button>

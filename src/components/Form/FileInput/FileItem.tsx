@@ -7,13 +7,13 @@ export const fileItem = tv({
   slots: {
     container:
       "group flex items-start gap-4 rounded-lg border border-zinc-200 p-4",
-    icon: "rounded-full border-violet-100 bg-violet-200 p-2 text-violet-600",
+    icon: "rounded-full border-violet-100 bg-violet-200 p-2 text-violet-600 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-500",
     deleteButton: "",
   },
 
   variants: {
     state: {
-      progress: { container: "" },
+      progress: { container: "dark:border-zinc-700" },
       complete: { container: "border-violet-500" },
       error: {
         container:
@@ -65,18 +65,22 @@ export function FileItem({ name, size, state }: FileItemProps) {
       ) : (
         <div className="flex flex-1 flex-col items-start gap-1">
           <div className="flex flex-col">
-            <div className="text-sm font-medium text-zinc-700">{name}</div>
-            <div className="text-sm text-zinc-500">{formatBytes(size)}</div>
+            <div className="text-sm font-medium text-zinc-700 dark:text-zinc-100">
+              {name}
+            </div>
+            <div className="text-sm text-zinc-500 dark:text-zinc-400">
+              {formatBytes(size)}
+            </div>
           </div>
 
           <div className="flex w-full items-center gap-3">
-            <div className="h-2 flex-1 rounded-full bg-zinc-100">
+            <div className="h-2 flex-1 rounded-full bg-zinc-100 dark:bg-zinc-600">
               <div
-                className="h-2 rounded-full bg-violet-600"
+                className="h-2 rounded-full bg-violet-600 dark:bg-violet-400"
                 style={{ width: state === "complete" ? "100%" : "80%" }}
               />
             </div>
-            <span className="text-sm font-medium text-zinc-500">
+            <span className="text-sm font-medium text-zinc-500 dark:text-zinc-300">
               {state === "complete" ? "100%" : "80%"}
             </span>
           </div>

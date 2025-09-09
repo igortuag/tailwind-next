@@ -14,7 +14,7 @@ export const fileItem = tv({
   variants: {
     state: {
       progress: { container: "dark:border-zinc-700" },
-      complete: { container: "border-violet-500" },
+      complete: { container: "border-violet-500 dark:border-violet-300/30" },
       error: {
         container:
           "bg-error-25 border-error-300 dark:bg-error-500/5 dark:border-error-500/30",

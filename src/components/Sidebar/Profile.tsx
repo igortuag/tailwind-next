@@ -1,18 +1,10 @@
 import { LogOut } from "lucide-react";
 import { Button } from "../Button";
 import { Switch } from "@/components/ui/switch";
+import { useTheme } from "next-themes";
 
 export default function Profile() {
-  // change app theme
-  function handleToggleTheme() {
-    if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark");
-      localStorage.theme = "light";
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.theme = "dark";
-    }
-  }
+  const { setTheme, theme } = useTheme();
 
   return (
     <div className="flex items-center gap-3 ">
@@ -36,10 +28,10 @@ export default function Profile() {
         <span className="sr-only">Logout</span>
       </Button>
       <Switch
-        onCheckedChange={handleToggleTheme}
+        onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
         defaultChecked={
-          localStorage.theme === "dark" ||
-          (!("theme" in localStorage) &&
+          theme === "dark" ||
+          (theme === "system" &&
             window.matchMedia("(prefers-color-scheme: dark)").matches)
         }
         className="data-[state=checked]:bg-violet-500 h-6 w-11 bg-zinc-200 dark:bg-zinc-700 relative rounded-full shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2"

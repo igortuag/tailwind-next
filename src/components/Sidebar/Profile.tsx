@@ -34,9 +34,10 @@ export default function Profile() {
           (theme === "system" &&
             window.matchMedia("(prefers-color-scheme: dark)").matches)
         }
-        className="data-[state=checked]:bg-violet-500 h-6 w-11 bg-zinc-200 dark:bg-zinc-700 relative rounded-full shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2"
       >
-        <span className="sr-only">Toggle theme</span>
+        <span className="sr-only">Toggle theme:</span>
+        <span className="sr-only data-[state=checked]:hidden">Light</span>
+        <span className="sr-only hidden data-[state=checked]:inline">Dark</span>
         <span className="data-[state=checked]:translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition-transform" />
       </Switch>
     </div>

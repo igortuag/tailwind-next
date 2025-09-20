@@ -9,7 +9,7 @@ import { Button } from "@/components/Button";
 
 export default function Home() {
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 max-w-full overflow-auto">
       <h1 className="text-2xl font-semibold dark:text-zinc-100">Settings</h1>
 
       <SettingsTabs />

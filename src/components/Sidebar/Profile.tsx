@@ -23,10 +23,6 @@ export default function Profile() {
           </a>
         </span>
       </div>
-      <Button type="button" variant="ghost">
-        <LogOut className="w-5 h-5 text-zinc-500" />
-        <span className="sr-only">Logout</span>
-      </Button>
       <Switch
         onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
         defaultChecked={
@@ -40,6 +36,10 @@ export default function Profile() {
         <span className="sr-only hidden data-[state=checked]:inline">Dark</span>
         <span className="data-[state=checked]:translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition-transform" />
       </Switch>
+      <Button type="button" variant="ghost">
+        <LogOut className="w-5 h-5 text-zinc-500" />
+        <span className="sr-only">Logout</span>
+      </Button>
     </div>
   );
 }

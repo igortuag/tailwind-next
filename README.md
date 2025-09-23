@@ -175,9 +175,3 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙏 Acknowledgments
 
 This project was developed as part of a comprehensive Tailwind CSS course, demonstrating practical applications of utility-first CSS principles in modern web development. Special thanks to the Tailwind CSS team for creating such an amazing framework that makes styling enjoyable and efficient.
-
----
-
-**Happy coding!** 🎉 Feel free to explore the code, experiment with the components, and use this project as a reference for your own Tailwind CSS implementations.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
